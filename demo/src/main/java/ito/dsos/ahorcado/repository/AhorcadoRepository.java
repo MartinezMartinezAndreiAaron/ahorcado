@@ -4,10 +4,13 @@
  */
 package ito.dsos.ahorcado.repository;
 
+import ito.dsos.ahorcado.model.AhorcadoModel;
+import org.springframework.data.jpa.repository.JpaRepository;
+
 /**
  *
  * @author Aaron
  */
-public class AhorcadoRepository {
-    
+public interface AhorcadoRepository extends JpaRepository<AhorcadoModel, Integer>{
+    public AhorcadoModel findByNombre(String nombre);
 }
